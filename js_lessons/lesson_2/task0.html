@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style2.css">
+	<title>task0</title>
+</head>
+
+<body>
+	<h5 class="task0"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-0</h3>
+		<h4>Дано значення a, b, c. Обчислити значення виразів.</h4>
+	<ul>
+		<li>S1=a+12+b</li>
+		<li>S_2=√(((a+b)/2a) )</li>
+		<li>S_3=∛((a+b)c)</li>
+		<li>S_4=sin⁡(a/(-b))</li>
+	</ul>
+	</header>
+	<main>
+	<script>
+        let a = parseInt(prompt(`Введіть число a`,`0`))
+		let b = parseInt(prompt(`Введіть число b`,`0`))
+		const c = 12
+        let s1 = a+b+c
+		let s2 = Math.sqrt((a + b) / (2 * a))
+		let s3 = Math.cbrt((a + b) * c )
+		let s4 = Math.sin (a / -b)
+	    document.write(`s1 = ${s1}<br> s2 = ${s2}<br> s3 = ${s3}<br> s4 = ${s4}`)
+	</script>
+	</main>
+	<footer class="footer">
+	</footer>
+</body>
+
+</html>
