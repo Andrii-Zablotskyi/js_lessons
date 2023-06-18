@@ -54,3 +54,6 @@ h5 {
   color: #0d3d68;
   background-color: bisque;
 }
+li:not(:last-child){
+  margin-bottom: 10px;
+}
