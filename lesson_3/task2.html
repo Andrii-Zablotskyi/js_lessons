@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style2.css">
+	<title>task2</title>
+</head>
+
+<body>
+	<h5 class="task2"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-2</h3>
+		<h4>2. З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо
+		ще залишаються гроші, то пропонуємо купити лотерею за 4 грн. </h4>
+	</header>
+	<main>
+	<script>
+		// Крок 0 - Оголошуємо змінні які приймають ціна товару і кількість грошей
+        let priseProduct = parseFloat(prompt(`Введіть ціну товару`)) 
+		let amountOfMoney = parseFloat(prompt(`Введіть кількість грошей`)) 
+		const lottry = 4
+        // Крок 1 - Порівнюємо ціну товару і кількість грошей, якщо сумма грошей меньша ніж ціна але більша або ріна 4 то пропонуємо купити лотерею,
+		// Крок 2 - якшо грошей меньше ніж 4 то відмовлямо в покупці
+		// Крок 3 - якщо жодна з умов не підходить то вітаємо з покупкою
+		if (priseProduct <= amountOfMoney)
+		alert(`Вітаю з покупкою`)
+		else if(priseProduct > amountOfMoney && amountOfMoney >= lottry)
+		alert(`У Вас не вистачає коштів але Ви можете купити лотерею`)
+		else if(priseProduct > amountOfMoney)
+		alert(`Вас не вистачає коштів`)
+	</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>

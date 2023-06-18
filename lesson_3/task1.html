@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style2.css">
+	<title>task1</title>
+</head>
+
+<body>
+	<h5 class="task1"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-1</h3>
+		<h4>1. З клавіатури вводяться імена двох дітей та кількість у них цукерок.
+			Вивести не екран ім’я тієї дитини, у якої
+		кількість цукерок є більшою, або вивести, що кількість однакова.</h4>
+	</header>
+	<main>
+	<script>
+		//Крок 0. оголосити 4  замiннi якi приймають iмена та кiлькicть цукерок + додають імена
+        let firstChild = prompt(`Введіть будь-ласка ім'я першої дитини`,`Руслан`)
+		let secondChild = prompt(`Введіть будь - ласка ім'я другої дитини`,`Іван`)
+		let quantityCandyFirstChild = parseInt(prompt(`Скільки цукерок у  ` + firstChild))
+		let quantityCandySecondChild = parseInt(prompt(`Скільки цукерок у  ` + secondChild))
+		//Крок 1. порівняти кількіть цукерок між змінними які прийняли їх кількість
+		// та вивести результати 
+		if (quantityCandyFirstChild > quantityCandySecondChild)
+		alert(`у ${firstChild} більше цукерок`)
+        else if (quantityCandyFirstChild < quantityCandySecondChild)
+        alert(`у ${secondChild} більше цукерок`)
+		else alert(`У них однакова кількість цукерок`)
+	</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>

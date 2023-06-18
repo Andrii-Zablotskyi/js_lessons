@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style2.css">
+	<title>task3</title>
+</head>
+
+<body>
+	<h5 class="task3"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-3</h3>
+		<h4>Випадковим чином генерується число від 1 до 5. Спробуйтевгадати число за 2 спроби. </h4>
+	</header>
+	<main>
+	<script>
+const min=1, max=5
+const randomNum = min + Math.floor(Math.random()*(max-min+1))
+let userNum = parseInt(prompt(`Введiть число`)) 
+if (randomNum === userNum) alert(`Ви вгадали!`)
+else {userNum = parseInt(prompt(`Ви не вгадали, Введiть число`))
+if (randomNum === userNum) alert(`Ви вгадали!`)
+else alert(`Ви не вгадали!`)}
+	</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>

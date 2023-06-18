@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style2.css">
+	<title>task4</title>
+</head>
+
+<body>
+	<h5 class="task4"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-4</h3>
+		<h4>З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером). </h4>
+	</header>
+	<main>
+	<script>
+        const userAge = parseInt(prompt(`Введіть Ваш вiк`))
+		if(userAge <1 || userAge > 150) alert(`не коректний Вiк`)
+        else if (userAge <= 7 ) alert(`В дитячиому садочку`)
+		else if(userAge <= 17 ) alert(`Ви в школi`)
+		else if (userAge <= 22 ) alert(`Ви студент`)
+		else if(userAge <= 65 ) alert(`Ви працiвник`)
+		else alert (`Пенсiонер`)
+	</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>
