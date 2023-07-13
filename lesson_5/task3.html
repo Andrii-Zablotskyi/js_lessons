@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style2.css" />
+	<title>task3</title>
+</head>
+
+<body>
+	<h5 class="task3"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-3</h3>
+		<h4>14. Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей
+			до тих пір,
+			поки суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно
+			ввести). </h4>
+	</header>
+	<main>
+		<script>
+			let PRICE = 500;
+			let userCash
+
+			while (PRICE > 0) {
+				userCash = parseFloat(prompt(`Потрібно сплатити ${PRICE}$ Введіть Сумму`))
+				PRICE -= userCash;
+				if (PRICE > 0) {
+					alert(`Ви сплатили ${userCash}, бракує ${PRICE}$`);
+				} else {
+					alert("Вітаю з покупкою");
+				}
+			}
+		</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>

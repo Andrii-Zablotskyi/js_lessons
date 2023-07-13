@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style2.css">
+	<title>task4</title>
+</head>
+
+<body>
+	<h5 class="task4"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-4</h3>
+		<h4>Задача 15. Користувача поступово вводить показники температури протягом року. Знайти середню температуру. (Згенерував 365раз) </h4>
+	</header>
+	<main>
+	<script>
+        let sum = 0
+		const initialValue = -25,
+		finalValue = 50
+		for (let i = 0; i < 365; i++) {
+			let temperature = 
+			initialValue + Math.floor(Math.random() * (finalValue - initialValue+1))
+			sum+=temperature
+		}
+		const average = sum / 365
+		document.write(`Average = ${average.toFixed(3)}`)
+	</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>
