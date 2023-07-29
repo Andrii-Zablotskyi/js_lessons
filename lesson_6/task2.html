@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style2.css">
+	<title>task2</title>
+</head>
+
+<body>
+	<h5 class="task2"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-2</h3>
+		<h4>4.1. З клавіатури вводяться два числа N i M Вивести а екран числа N---M N+1 --- M-1 N+2 --- M-2 N+3 --- M-3
+		Виведення завершити коли число справа стане меншим за число зліва.</h4>
+	</header>
+	<main>
+		<script>
+    let N= 0
+    let M= 1
+    while (N<M) {
+	N= parseFloat(prompt(`ведiть число N`))
+    M= parseFloat(prompt(`ведiть число M`))
+    document.write(`N-${N} --- M-${M} <br>`)}
+		</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>

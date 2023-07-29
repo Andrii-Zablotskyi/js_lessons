@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style2.css" />
+	<title>task3</title>
+</head>
+
+<body>
+	<h5 class="task3"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-3</h3>
+		<h4>8. Щоденно спортзал відвідує певна кількість людей. Користувач вводить такі дані: скільки людей відвідало спортзал за
+		день та вік кожного відвідувача. Потрібно вивести вік найстаршого та наймолодшого відвідувачів, а також середній вік
+		всіх відвідувачів спортзалу за день.</h4>
+	</header>
+	<main>
+		<script>
+			let peple = parseFloat(prompt(`Скільки людей відвідало спортзал за день`));
+			let pepleAge
+			let maxAge=-Infinity
+			let minAge= Infinity
+			let summAge =0
+			let middleAge
+			
+			for (let i = 0; i < peple; i++) {
+				pepleAge=parseFloat(prompt(`Скільки рокiв вiдвiдувачу`))
+				summAge +=pepleAge
+				if (maxAge < pepleAge) maxAge = pepleAge
+				if (minAge > pepleAge) minAge = pepleAge
+				}
+				middleAge = summAge / peple
+				
+				document.write (`Вік найстаршого ${maxAge} та наймолодшого ${minAge} відвідувачів, а також середній вік 
+		всіх відвідувачів спортзалу за день ${middleAge.toFixed(1) }`)
+		</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>

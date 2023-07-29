@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style2.css">
+	<title>task1</title>
+</head>
+
+<body>
+	<h5 class="task1"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-1</h3>
+		<h4>3. З клавіатури вводиться початкове знчення суми. Поки сума є меншою за 100 додавати до неї числа, які вводяться з
+		клавіатури.</h4>
+	</header>
+	<main>
+		<script>
+			let totalSum = 100;
+			let startSum
+			while ( totalSum > 0 ){
+			startSum = parseFloat(prompt(`Потрібно ввести сумму ${totalSum} Введіть число`))
+			totalSum -= startSum;
+            if (totalSum > 0 ){
+			alert (`Введено ${startSum} Не вистачає ${totalSum}`);
+            } else {
+			alert (`Є-100, дякую!`);
+			}
+			}
+		</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>
