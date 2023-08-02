@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task4</title>
+</head>
+
+<body>
+  <h5 class="task4"><a target="_blank" href="./index.html">Головна</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-4</h3>
+    <h4>
+      Задача 6. Створити функцію, яка створює таблицю з вказаною кількістю
+      рядків і стовпців (таблиця заповнюється заданим фіксованим
+      повідомленням).
+    </h4>
+  </header>
+  <main>
+    <script>
+      function tableUser(rowUser, lineUser) {
+        document.write(`<table border=1px>`);
+        for (let tab = 1; tab <= rowUser; tab++) {
+          document.write(`<tr>`);
+          for (let tab = 1; tab <= lineUser; tab++)
+            document.write(`<td>
+		фіксоване повідомлення<br></td>`);
+          document.write(`</tr>`);
+        }
+        document.write(`</table >`);
+        return rowUser, lineUser;
+      }
+      let sum1 = prompt(`Введіть кiлькiсть рядкiв`);
+      let sum2 = prompt(`Введіть кiлькiсть колонок`);
+      document.write(tableUser(sum1, sum2));
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

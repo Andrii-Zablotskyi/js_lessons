@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style2.css" />
+	<title>task3</title>
+</head>
+
+<body>
+	<h5 class="task3"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-3</h3>
+		<h4>Задача 2. Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</h4>
+	</header>
+	<main>
+		<script>
+			function findDay(namberDay) {
+				let day;
+				switch (namberDay) {
+					case '1':
+					case '2':
+					case '3':
+					case '4':
+					case '5':
+						season = 'Робочий день'
+						break;
+					case '6':
+					case '7':
+						season = 'Вихідний'
+						break;
+					default: season = 'Не найдено'
+						break;
+				}
+				return season
+			}
+			const num = prompt('Введіть номер дня від 1 до 7')
+			alert(findDay(num))
+		</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>

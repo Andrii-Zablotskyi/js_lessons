@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style2.css">
+	<title>task2</title>
+</head>
+
+<body>
+	<h5 class="task2"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-2</h3>
+		<h4>Задача 1. Створити функцію, яка за номером місяця повертає його назву.</h4>
+	</header>
+	<main>
+		<script>
+			function findMonth(namberMonth) {
+				let mont;
+				switch (namberMonth) {
+					case '1':
+						mont = 'Січень'
+						break;
+					case '2':
+						mont = 'Лютий'
+						break;
+					case '3':
+						mont = 'Березень'
+						break;
+					case '4':
+						mont = 'Квітень'
+						break;
+					case '5':
+						mont = 'Травень'
+						break;
+					case '6':
+						mont = 'Червень'
+						break;
+					case '7':
+						mont = 'Липень'
+						break;
+					case '8':
+						mont = 'Серпень'
+						break;
+					case '9':
+						mont = 'Вересень'
+						break;
+					case '10':
+						mont = 'Жовтень'
+						break;
+					case '11':
+						mont = 'Листопад'
+						break;
+					case '12':
+						mont = 'Грудень'
+						break;
+					default: mont = 'Не найдена'
+						break;
+				}
+				return mont
+			}
+			const num = prompt('Введіть номер місяця від 1 до 12')
+			alert(findMonth(num))
+
+		</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>

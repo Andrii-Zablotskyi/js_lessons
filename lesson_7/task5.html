@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style2.css">
+	<title>task5</title>
+</head>
+
+<body>
+	<h5 class="task5"><a target="_blank" href="./index.html">Головна</a></h5>
+	<header class="header">
+		<h3 class="header-text">Задача-5</h3>
+		<h4>Задача 10. Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє
+			значення для додатних показів температури.</h4>
+	</header>
+	<main>
+		<script>
+			function averagePositive(numberDays) {
+				let sum = 0
+				const minTemperature = -25,
+					maxTemperature = 50
+				for (let i = 0; i < numberDays; i++) {
+					let temperature =
+						minTemperature + Math.floor(Math.random() * (maxTemperature - minTemperature + 1))
+					if (temperature % 2 === 0)
+						sum += temperature
+				}
+				const average = sum / numberDays
+				return average
+			}
+			let sum = parseInt(prompt(`Введіть кількість днів для визнацення середнього значення додатних показів температури`))
+			document.write(`Середнє значення додатних показів температури = ${(averagePositive(sum).toFixed(2))}`)
+		</script>
+	</main>
+	<footer>
+	</footer>
+</body>
+
+</html>
