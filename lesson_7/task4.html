@@ -21,21 +21,21 @@
   </header>
   <main>
     <script>
-      function tableUser(rowUser, lineUser) {
-        document.write(`<table border=1px>`);
-        for (let tab = 1; tab <= rowUser; tab++) {
-          document.write(`<tr>`);
-          for (let tab = 1; tab <= lineUser; tab++)
-            document.write(`<td>
-		фіксоване повідомлення<br></td>`);
-          document.write(`</tr>`);
+     function tableUser(rowUser, lineUser, mesUser) {
+          document.write(`<table border=1px>`);
+          for (let tab = 1; tab <= rowUser; tab++) {
+            document.write(`<tr>`);
+            for (let tab = 1; tab <= lineUser; tab++)
+              document.write(`<td>${message}</td>`);
+            document.write(`</tr>`);
+          }
+          document.write(`</table >`);
         }
-        document.write(`</table >`);
-        return rowUser, lineUser;
-      }
-      let sum1 = prompt(`Введіть кiлькiсть рядкiв`);
-      let sum2 = prompt(`Введіть кiлькiсть колонок`);
-      document.write(tableUser(sum1, sum2));
+
+        let sum1 = parseInt(prompt(`Введіть кiлькiсть рядкiв`));
+        let sum2 = parseInt(prompt(`Введіть кiлькiсть колонок`));
+        let message = prompt(`Введiть повiдомлення`);
+        tableUser(sum1, sum2, message);
     </script>
   </main>
   <footer></footer>
