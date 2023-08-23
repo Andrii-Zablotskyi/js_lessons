@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task2</title>
+</head>
+
+<body>
+  <h5 class="task2"><a target="_blank" href="./index.html">Головна</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-2</h3>
+    <h4>
+      Задача 2. Дано масив, який зберігає кількість відвідувачів магазину
+      протягом тижня. Вивести на екран:<br />
+      • номери днів, протягом яких кількість відвідувачів була меншою за 20;
+      <br />
+      • номери днів, коли кількість відвідувачів була мінімальною;<br />
+      • номери днів, коли кількість відвідувачів була максимальною;<br />
+      • загальну кількість клієнтів у робочі дні та окремо загальну кількість
+      днів на вихідних.
+    </h4>
+  </header>
+  <main>
+    <script>
+      // Дано масив, який зберігає кількість відвідувачів магазину протягом тижня
+      let counterPeopleWeek = [20, 21, 12, 32, 44, 10, 15];
+      // • номери днів, протягом яких кількість відвідувачів була меншою за 20;
+      // функція яка вираховує значення меньші за 20
+      function moreThanTwenty(arr) {
+        let twenty = 20;
+        let counterPeopleLessTwenty = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < twenty) counterPeopleLessTwenty++;
+        }
+        return counterPeopleLessTwenty;
+      }
+
+
+      // • номери днів, коли кількість відвідувачів була мінімальною;
+      function clientsMin(arr) {
+          let min = arr[0];
+          let counterDay = 0;
+          for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min)
+              counterDay++
+          }
+          return counterDay;
+        }
+      
+//         функція для перегляду масиву
+//         for(let item of arr) {
+//           console.log(item)
+//         }
+// наприклад пошук мінімального або максимального або додавання кількість додатніх і т.д.
+
+      // • номери днів, коли кількість відвідувачів була максимальною;
+      function clientsMax(arr) {
+          let max = arr[0];
+          let counterDay = 0;
+          for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) counterDay++;
+          }
+          return counterDay;
+        }
+      // • загальну кількість клієнтів у робочі дні та окремо загальну кількість днів на вихідних.
+      // кількість клієнтів у робочі дні
+      function clientsWorkDay(arr) {
+        let counterPeople = 0;
+        for (let i = 0; i < 5; i++) {
+          if (arr[i] > 0) counterPeople+= arr[i];
+        }
+        return counterPeople;
+      }
+
+      // загальну кількість днів на вихідних
+      function clientsWekend(arr) {
+        let counterPeople = 0;
+        for (let i = 5; i < 7; i++) {
+          if (arr[i] > 0) counterPeople+=arr[i]
+        }
+        return counterPeople;
+      }
+
+      document.write(`номери днів, протягом яких кількість відвідувачів була меншою за 20 - ${moreThanTwenty(counterPeopleWeek)} <br />
+      номери днів, коли кількість відвідувачів була мінімальною - ${clientsMin(counterPeopleWeek)} <br />
+      номери днів, коли кількість відвідувачів була максимальною - ${clientsMax(counterPeopleWeek)}<br />
+      загальну кількість клієнтів у робочі дні - ${clientsWorkDay(counterPeopleWeek)} <br />
+      окремо загальну кількість днів на вихідних - ${clientsWekend(counterPeopleWeek)}`);
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

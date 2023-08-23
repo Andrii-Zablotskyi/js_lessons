@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task1</title>
+</head>
+
+<body>
+  <h5 class="task1"><a target="_blank" href="./index.html">Головна</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-1</h3>
+    <h4>
+      Задача 1. Дано масив, який містить оцінки з К предметів. Знайти середній
+      бал і з’ясувати до якої категорії він відноситься (відмінник, двійочник
+      (має хоча би одну двійку), хорошист (оцінки добре і відмінно),
+      трійочник(є хоча би одна трійка)).
+    </h4>
+  </header>
+  <main>
+    <script>
+      function gradeСounter(arr) {
+        let sumGrade = 0
+        let averageGrade = 0
+        let gradeValue = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (gradeValue > 0) {
+            sumGrade += gradeValue;
+            averageGrade = sumGrade / arr.length
+          }
+        }
+        return averageGrade;
+      }
+
+
+      function findGrade(arr) {
+        let whoIs;
+        switch (Math.floor(gradeСounter(scores))) {
+          case 1:
+          case 2:
+            whoIs = 'Двiйочник';
+            break;
+          case 3:
+            whoIs = 'Трiйочник';
+            break;
+          case 4:
+          case 5:
+            whoIs = 'Хорошист';
+            break;
+          default:
+            throw new Error('Некоректна оцінка')
+            break;
+        }
+        return whoIs;
+      }
+
+      let scores = [5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4];
+      let num = gradeСounter(scores);
+
+
+      document.write(`Середный бал ${num.toFixed(2)} вiн ${findGrade(scores)}`);
+
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

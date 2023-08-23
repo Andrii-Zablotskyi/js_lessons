@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <title>task4</title>
+  </head>
+
+  <body>
+    <h5 class="task4"><a target="_blank" href="./index.html">Головна</a></h5>
+    <header class="header">
+      <h3 class="header-text">Задача-4</h3>
+      <h4>
+        Задача 4. Дано послідовність номерів автомобілів. Підрахувати кількість
+        номерів, які : • починаються на букву «А»; • перша і остання літери
+        співпадають; • складаються з більше ніш 5 символів;
+      </h4>
+    </header>
+    <main>
+      <script>
+        let numberAuto = [
+          'aa3434as',
+          'sd2233rr',
+          'hj5567jj',
+          'er5687ki',
+          'sf6678ui',
+          'aa4534aa',
+          'aa4454as',
+          'ar7689as',
+          'ak8411aa'
+        ];
+
+        // починаються на букву «А»;
+        function findA(arr) {
+          let a = "a";
+          let counterA = 0;
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i][0] === a) counterA++;
+          }
+          return counterA;
+        }
+
+        // перша і остання літери співпадають;
+        function findStartEndLeaters(arr) {
+          let counterIndex = 0;
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i][0] === arr[i][7]) counterIndex++;
+          }
+          return counterIndex;
+        }
+
+        // складаються з більше ніш 5 символів;
+        function findCounterLetters(arr) {
+          let counterIetters = 0;
+          let fift = 5;
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i].length > fift) counterIetters++;
+          }
+          return counterIetters;
+        }
+
+        document.write(`Номера починаються на букву «А» - ${findA(numberAuto)} <br>
+перша і остання літери співпадають - ${findStartEndLeaters(numberAuto)} разiв <br>
+складаються з більше ніш 5 символів - ${findCounterLetters(numberAuto)} разів`);
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>
