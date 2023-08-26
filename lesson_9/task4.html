@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task4</title>
+</head>
+
+<body>
+  <h5 class="task4"><a target="_blank" href="./index.html">Назад</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-4</h3>
+    <h4>
+      4 (Тут використатицикл for..of 5.Дано масив елементів. Знайти добуток додатних елементів)
+    </h4>
+  </header>
+  <main>
+    <script>
+      let arr = [21, -112, 44, -333, 544, -766, 77, -83, 33, -333, 788];
+      let sum = 0
+      for (let el of arr) {
+        if (el > 0) sum = el * el
+      }
+      document.write(`${sum}`)
+
+      // Задача 0. Знайти добуток елементів масиву
+      // let arr = [-10, -9, 5, 13, 17, 16, 18, 19, 21, 11, 7, -4]
+      // let prod = arr.reduce((prevProd, el) => prevProd * el)
+      // document.write(prod)
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

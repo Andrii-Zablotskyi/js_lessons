@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task2</title>
+</head>
+
+<body>
+  <h5 class="task2"><a target="_blank" href="./index.html">Назад</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-2</h3>
+    <h4>
+      2. Користувач вводить кількість елементів. Створити масив, у якому перша половина заповнена 1-цями, а друга заповнена
+			7-ками.
+    </h4>
+  </header>
+  <main>
+    <script>
+let firstHalf = parseInt(prompt(`Введiть кiлькiсть елементiв масиву`))
+let arr = new Array(firstHalf)
+arr.fill(1,0,firstHalf/2)
+arr.fill(7,firstHalf/2)
+document.write(arr)
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
