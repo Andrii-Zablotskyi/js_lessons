@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <title>task5</title>
+  </head>
+
+  <body>
+    <h5 class="task5"><a target="_blank" href="./index.html">Головна</a></h5>
+    <header class="header">
+      <h3 class="header-text">Задача-5</h3>
+      <h4>Задача-5 (5.Підрахувати кількість змін цін)</h4>
+    </header>
+    <main>
+      <script>
+        let arr = [
+          323, 445, 45, 88, 556, 677, 995, 555, 900, 333, 0, 44, 5, 545, 77, 8,
+          66, 50, 67, 56, 556, 44, 90, 45, 55,
+        ];
+        let changePrice = arr.reduce((counter, elem, index, baseArr) =>
+          elem !== baseArr[index-1] ? counter + 1 : counter,
+          -1
+        );
+        document.write(changePrice);
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

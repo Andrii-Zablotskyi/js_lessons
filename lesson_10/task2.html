@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task2</title>
+</head>
+
+<body>
+  <h5 class="task2"><a target="_blank" href="./index.html">Головна</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-2</h3>
+    <h4>
+      Задача-2 (2.Сформувати новий масив, у якому є номери тільки тих, що більші за 1000 грн.)
+    </h4>
+  </header>
+  <main>
+    <script>
+      let ransdomIndex = [];
+      const min = 0, max = 10000
+
+      for (let i = 0; i < 30; i++) {
+        const randomNum = min + Math.floor(Math.random() * (max - min + 1))
+        if (randomNum > 0)
+          ransdomIndex.push(randomNum)
+      }
+
+      let findIndex = []
+      ransdomIndex.map((el, index) => {
+        if (el > 1000)
+          findIndex.push(index)
+      })
+      document.write(findIndex);
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
