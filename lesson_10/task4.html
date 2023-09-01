@@ -24,11 +24,11 @@
         323, 445, 45, 88, 556, 677, 995, 555, 900, 333, 0, 44, 5, 545, 77, 8,
         66, 50, 67, 56, 556, 44, 90, 45, 55,
       ];
-     let maxAge= Math.max(...array)
+    let maxAge= Math.max(...array)
       let procentMaxAge = 100 / maxAge
 
       let newArrayProcent = array.map((element) => {
-        if (maxAge > element) procentMaxAge * element; 
+        if (maxAge > element) return (procentMaxAge * element).toFixed(2); 
       });
 
       document.write(newArrayProcent);
