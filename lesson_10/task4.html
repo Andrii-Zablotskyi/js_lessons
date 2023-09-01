@@ -22,15 +22,10 @@
     <script>
       let arr = [
         323, 445, 45, 88, 556, 677, 995, 555, 900, 333, 0, 44, 5, 545, 77, 8,
-        66, 50, 67, 56, 556, 44, 90, 45, 55,
-      ];
-      let maxAge = Math.max(...array)
-      let newArrayProcent = array.map((element) => {
-        if (maxAge > element) return (100 / maxAge * element).toFixed(2);
-      });
-
-      document.write(newArrayProcent);
-
+        66, 50, 67, 56, 556, 44, 90, 45, 55,];
+      let maxNum = Math.max(...arr)
+      let newArr = arr.map(element => ((element / maxNum) * 100).toFixed(2));
+      document.write(newArr);
     </script>
   </main>
   <footer></footer>
