@@ -24,16 +24,14 @@
         323, 445, 45, 88, 556, 677, 995, 555, 900, 333, 0, 44, 5, 545, 77, 8,
         66, 50, 67, 56, 556, 44, 90, 45, 55,
       ];
-      function getMaxOfArray(numArray) {
-        return Math.max.apply(null, numArray);
-      }
-      let maxAge = getMaxOfArray(arr);
+     let maxAge= Math.max(...array)
       let procentMaxAge = 100 / maxAge
-      let newArr = arr.map((el, ind, baseArr) => {
-        if (maxAge > el) procentMaxAge * el;
+
+      let newArrayProcent = array.map((element) => {
+        if (maxAge > element) procentMaxAge * element; 
       });
 
-      document.write(newArr);
+      document.write(newArrayProcent);
 
     </script>
   </main>
