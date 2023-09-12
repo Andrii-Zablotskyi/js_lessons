@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <title>task3</title>
+  </head>
+
+  <body>
+    <h5 class="task3"><a target="_blank" href="./index.html">Головна</a></h5>
+    <header class="header">
+      <h3 class="header-text">Задача-3</h3>
+      <h4>
+        Задача-3 Дано інформацію про прибуток К магазинів протягом тижня.
+         Знайти : 3- загальний прибуток за робочі дні
+      </h4>
+    </header>
+    <main>
+      <script>
+         let table=[
+          [71, 79, 98, 67, 13, 76, 56],
+          [15, 9, 95, 11, 81, 81, 47],
+          [100, 88, 88, 24, 20, 24, 18],
+          [45, 51, 72, 59, 12, 17, 22],
+          [70, 95, 67, 18, 31, 90, 76],]
+       // функція для знаходження прибутку 
+        function findSummStor(array, startRowsInd, endRowsInd, startColumnsInd, endColumnsInd) {
+          let sum = 0
+          for (let row = startRowsInd; row < endRowsInd; row++) {
+            for (let col = startColumnsInd; col < endColumnsInd; col++) {
+              sum += array[row][col];
+            }
+          }
+          return sum
+        }
+        // за допомогою функції знаходимо задану область масиву 
+        let storOne = findSummStor(table, 0, 1, 0, 5)
+        let storTwo = findSummStor(table, 1, 2, 0, 5)
+        let storThree = findSummStor(table, 2, 3, 0, 5)
+        let storFour = findSummStor(table, 3, 4, 0, 5)
+        let storFive = findSummStor(table, 4, 5, 0, 5)
+        // виводимо результати
+        document.write(`Прибуток першого магазину за робочі дні - ${storOne}<br>`)
+        document.write(`Прибуток другого магазину за робочі дні - ${storTwo}<br>`)
+        document.write(`Прибуток третього магазину за робочі дні - ${storThree}<br>`)
+        document.write(`Прибуток четвертого магазину за робочі дні - ${storFour}<br>`)
+        document.write(`Прибуток пятого магазину за робочі дні - ${storFive}<br>`)
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

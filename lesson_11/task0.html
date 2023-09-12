@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task1</title>
+</head>
+
+<body>
+  <h5 class="task0"><a target="_blank" href="./index.html">Головна</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-0</h3>
+    <h4>
+      Задача 0. Знайти суми елементів у вказаній області (масиви розділені на 4 рівні частини - не звертаємо увагу на
+      криві
+      малюнки ) також 5- Суму парних рядків
+      6- Суму непарних стовпців
+      7- У парних рядках – непарні стовпці, у непарних – парні.
+    </h4>
+  </header>
+  <main>
+    <script>
+      let arr = [ [23, 35, 65, 74, 78, 7],  
+                  [67, 76, 75, 77, 55, 55], 
+                  [43, 99, 0, 55, 56, 0],   
+                  [67, 77, 30, 76, 54, 45], 
+                  [67, 56, 45, 77, 55, 55], 
+                  [43, 99, 60, 55, 56, 0]  
+                   ] 
+      //Змінні сумм на кожну область
+      let firstsAreaSum = 0
+      let sumSecondArea = 0
+      let thirdAreaSum = 0
+      let fourthdAreaSum = 0
+
+      //Тут я знаходжу сумму першої області, від 0 до 2 
+      // по рядках і колонках включно
+      for (rowIndex = 0; rowIndex <= 2; rowIndex++) {
+        for (colIndex = 0; colIndex <= 2; colIndex++) {
+          firstsAreaSum += arr[rowIndex][colIndex];
+        }
+      }
+      //Тут я знаходжу сумму другої області, від 0 до 2 по рядках включно
+      // і від 3 до 5 по колонках включно
+      for (rowIndex = 0; rowIndex <= 2; rowIndex++) {
+        for (colIndex = 3; colIndex <= 5; colIndex++) {
+          sumSecondArea += arr[rowIndex][colIndex];
+        }
+      }
+      //Тут я знаходжу сумму третьої області, від 3 до 5 по рядках
+      // і колонках від 0 до 2  включно
+      for (rowIndex = 3; rowIndex <= 5; rowIndex++) {
+        for (colIndex = 0; colIndex <= 2; colIndex++) {
+          thirdAreaSum += arr[rowIndex][colIndex];
+        }
+      }
+      //Тут я знаходжу сумму четвертої області, від 3 до 5 по рядках
+      // і колонках включно
+      for (rowIndex = 3; rowIndex <= 5; rowIndex++) {
+        for (colIndex = 3; colIndex <= 5; colIndex++) {
+          fourthdAreaSum += arr[rowIndex][colIndex];
+        }
+      }
+
+
+
+      // знаходимо - Суму парних рядків
+      //змінна сумми
+      let sumPairedRows = 0
+      // знаходжу за допомогою цикла for в циклі for, рядок беру весь 
+      //і стовпці всі але крок +=2
+      for (rowIndex = 0; rowIndex < arr.length; rowIndex++) {
+        for (colIndex = 0; colIndex < arr.length; colIndex += 2) {
+          sumPairedRows += arr[rowIndex][colIndex];
+        }
+      }
+      //  знаходимо - Суму непарних стовпців, рядок і стовпці рахуємо до кінця але стовпці починаемо з 1 крок += 2
+      //змінна сумми
+      let sumUnpairedColumns = 0
+      for (rowIndex = 0; rowIndex < arr.length; rowIndex ++) {
+        for (colIndex = 1; colIndex < arr.length; colIndex += 2) {
+          sumUnpairedColumns += arr[rowIndex][colIndex];
+        }
+      }
+      // знаходимо - У парних рядках – непарні стовпці,
+      let sumPairedRowsUnpairedColumns = 0
+      for (rowIndex = 0; rowIndex < arr.length; rowIndex += 2) {
+        for (colIndex = 1; colIndex < arr.length; colIndex += 2) {
+          sumPairedRowsUnpairedColumns += arr[rowIndex][colIndex];
+        }
+      }
+      // у непарних рядках– парні стовпці.
+      let sumUnpairedRowsPairedColumns = 0
+      for (rowIndex = 1; rowIndex < arr.length; rowIndex += 2) {
+        for (colIndex = 0; colIndex < arr.length; colIndex += 2) {
+          sumUnpairedRowsPairedColumns += arr[rowIndex][colIndex];
+        }
+      }
+
+      document.write(`Сумма першої області ${firstsAreaSum}<br>
+      Сумма другої області ${sumSecondArea}<br>
+      Сумма третьої області ${thirdAreaSum}<br>
+      Сумма четвертої області ${fourthdAreaSum}<br>
+
+      Сумма парних рядків ${sumPairedRows} <br>
+      Сумма непарних стовпців ${sumUnpairedColumns} <br>
+      Сумми: у парних рядках – непарні стовпці ${sumPairedRowsUnpairedColumns} <br>
+      У непарних рядках парні стовпці ${sumUnpairedRowsPairedColumns}`)
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

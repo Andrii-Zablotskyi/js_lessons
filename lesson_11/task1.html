@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task1</title>
+</head>
+
+<body>
+  <h5 class="task1"><a target="_blank" href="./index.html">Головна</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-1</h3>
+    <h4>
+      Задача 1. Дано інформацію про прибуток К магазинів протягом тижня. Знайти :
+      1- загальний прибуток кожного масиву за тиждень;
+    </h4>
+  </header>
+  <main>
+    <script>
+      //функція генерації рандомного числа
+      function getRandomNumber(minValue, maxValue) {
+        return (minValue + Math.floor(Math.random() * (maxValue - minValue + 1)))
+      }
+      //функція генерації рядків масиву
+      function getRandomArr(someArrLength, minValue, maxValue) {
+        let someArr = []
+        for (let i = 0; i < someArrLength; i++) {
+          let randNum = getRandomNumber(minValue, maxValue)
+          someArr.push(randNum)
+        }
+        return someArr
+      }
+
+      //функція генерації двовимірного масиву
+      function generateRandomArr(rowsNumber, columnsNumber, minValue, maxValue) {
+        let tableArr = []
+        for (let i = 0; i < rowsNumber; i++) {
+          let randomRow = getRandomArr(columnsNumber, minValue, maxValue)
+          tableArr.push(randomRow)
+        }
+        return tableArr
+      }
+
+      //Виклик функції массиву де ми формуємо масив, з 10 одновимірних масивів з 7 цифр від 1 до 100.
+      let table = generateRandomArr(10, 7, 1, 100)
+
+      //функція знаходження прибутока кожного масиву за тиждень
+      function findSummStor(array, startRowsInd, endRowsInd, startColumnsInd, endColumnsInd) {
+        let sum = 0
+        for (let row = startRowsInd; row < endRowsInd; row++) {
+          for (let col = startColumnsInd; col < endColumnsInd; col++) {
+            sum += array[row][col];
+          }
+        }
+        return sum
+      }
+      // за допомогою функції знаходимо задану область масиву
+      let storOne = findSummStor(table, 0, 1, 0, 7)
+      let storTwo = findSummStor(table, 1, 2, 0, 7)
+      let storThree = findSummStor(table, 2, 3, 0, 7)
+      // виводимо результати
+      document.write(`Прибуток першого магазину за тиждень - ${storOne}<br>`)
+      document.write(`Прибуток другого магазину за тиждень - ${storTwo}<br>`)
+      document.write(`Прибуток третього магазину за тиждень - ${storThree}<br>`)
+      // і так далі
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

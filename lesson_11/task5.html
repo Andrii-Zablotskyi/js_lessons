@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <title>task5</title>
+  </head>
+
+  <body>
+    <h5 class="task5"><a target="_blank" href="./index.html">Головна</a></h5>
+    <header class="header">
+      <h3 class="header-text">Задача-5</h3>
+      <h4>
+        Задача-5 Дано інформацію про прибуток К магазинів протягом тижня. Знайти
+        : 5- максимальний прибуток за середу
+      </h4>
+    </header>
+    <main>
+      <script>
+        let table = [
+          [71, 79, 98, 67, 13, 76, 56],
+          [15, 9, 95, 11, 81, 81, 47],
+          [100, 88, 88, 24, 20, 24, 18],
+          [45, 51, 72, 59, 12, 17, 22],
+          [70, 95, 67, 18, 31, 90, 76],
+        ];
+        // функція для знаходження прибутку
+        function findSummStor(array) {
+          let maxProfitWedn = 0;
+          for (let row = 2; row < 3; row++) {
+            for (let col = 0; col < array.length; col++) {
+              if (maxProfitWedn < array[col][row])
+                maxProfitWedn = array[col][row];
+            }
+          }
+          return maxProfitWedn;
+        }
+        let max = findSummStor(table);
+        document.write(`Максимальний прибуток за середу складає - ${max}`);
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>
