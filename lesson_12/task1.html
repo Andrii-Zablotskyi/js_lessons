@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <title>task1</title>
+  </head>
+
+  <body>
+    <h5 class="task1"><a target="_blank" href="./index.html">Головна</a></h5>
+    <header class="header">
+      <h3 class="header-text">Задача-1</h3>
+      <h4>
+        Задача-1 (Дано масив 30 випадкових цілих чисел. Підрахувати скільки було
+        обмінів під час сортування бульбашкою.)
+      </h4>
+    </header>
+    <main>
+      <script>
+        let arr = [
+          323, 445, 45, 88, 556, 677, 995, 555, 900, 333, 0, 44, 5, 545, 77, 8,
+          66, 50, 67, 56, 556, 44, 90, 45, 55, 26, 32, 76, 55, 90,
+        ];
+        const prevLastNumber = arr.length - 2;
+        let counter = 0;
+        for (let i = 0; i <= prevLastNumber; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[i]) {
+              let temp = arr[j];
+              arr[j] = arr[i];
+              arr[i] = temp;
+              counter++;
+            }
+          }
+        }
+        document.write(`Упорядкований масив ${arr}<br>`);
+        document.write(`Виконано операцій ${counter}`);
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style2.css" />
+  <title>task5</title>
+</head>
+
+<body>
+  <h5 class="task5"><a target="_blank" href="./index.html">Головна</a></h5>
+  <header class="header">
+    <h3 class="header-text">Задача-5</h3>
+    <h4>Задача-5 (Дано масив імен. Застосовуючи відповідне сортування та бінарний пошук визначити, чи є у масиві ім’я
+      «Olga»і під яким індексом.)</h4>
+  </header>
+  <main>
+    <script>
+      let arr = ['Dmitro', 'Valentina', 'Petro', 'Marfa', 'Roman', 'Katerina', 'Oleg',];
+      document.write(arr)
+      arr.sort();
+      function findIndex_FirstNameIndex(arr, searchElement) {
+        let start = 0
+        let end = arr.length - 1
+        while (start <= end) {
+          let middle = Math.floor((start + end) / 2)
+          if (arr[middle] === searchElement) return middle
+          if (arr[middle] < searchElement) start = middle + 1
+          if (arr[middle] > searchElement) end = middle - 1
+        }
+        return false
+      }
+
+      document.write(`<br>${arr.sort()}<br>`);
+      let indexEl = findIndex_FirstNameIndex(arr, 'Olga')
+      if (findIndex_FirstNameIndex(arr, 'Olga'))
+        document.write(`<br>Імя Olga є в масиві і воно під індексом ${indexEl}<br>`)
+      else document.write(`<br>Iмені Olga немає у масиві`);
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
